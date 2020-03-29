@@ -321,3 +321,7 @@ Essa seção é para te ajudar a ter um controle do que você precisa completar.
 * [ ] Cifrar/decifrar minúsculas.
 * [ ] Cifrar/decifrar _outros_ caractéres (espações, pontuação, `ç`, `á`, ...).
 * [ ] Permitir usar `offset` negativo.
+
+
+
+teste de karina editando readme
