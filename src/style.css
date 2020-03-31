@@ -1,0 +1,37 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 12px 12px 12px 5px;
+
+}
+
+html {
+background-image: linear-gradient(rgb(176, 176, 238),white);
+margin: 10px 10px 10px 10px;
+}
+
+#root {
+    margin: 25px 50px 75px 20px;
+
+    color: blue;
+}
+
+.pass{
+    color: darkviolet;
+    border-radius: 40px;
+    background-color: firebrick;
+}
+
+div.textIn{
+    color: blue;
+}
+
+h1{
+    font-size: 40px;
+}
+
+button{
+    color: blue;
+    background-color: rgb(174, 202, 230);
+    font-size: 20px;
+}
