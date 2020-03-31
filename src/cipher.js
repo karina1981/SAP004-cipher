@@ -1,19 +1,31 @@
-    // , '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ' '
 
 const cipher = {
+  caracteresValidos: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
   encode: function(numero, texto) {
+    if (numero == undefined || texto == undefined) {
+      throw new TypeError('Parametros requiridos', 2);
+    }
     numero = parseInt(numero);
-    const caracteresValidos = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'X', 'Y', 'Z', ' '];
 
-    let resultado = '';
-    let myRe = /[^A-Z\ ]+/g;
+    if (numero <= 0) {
+      throw new TypeError('Numero deve ser positivo', 6);
+    }
+
+    if (texto.length == 0) {
+      throw new TypeError('Texto deve ser digitado', 5);
+    }
+
+    const caracteresValidos = this.caracteresValidos;
+
+    let resultado = "";
+    let myRe = /[^A-Z]+/g;
     let verificaCaracteresValidos = texto.match(myRe);
 
     if (verificaCaracteresValidos && verificaCaracteresValidos.length > 0) {
-      alert('Voce deve digitar apenas letras de A - Z e numeros')
-      return false;
+      throw new TypeError('Voce deve digitar apenas letras de A - Z e numeros', 10)
     }
-    if (numero != NaN && numero > 0) {
+
+    if (!isNaN(numero) && numero > 0) {
 
       for(let contador = 0; contador < texto.length; contador++) {
         let caracterAtual = texto[contador];
@@ -24,29 +36,38 @@ const cipher = {
 
         resultado += caracteresValidos[indice].toString();
       }
-      
+
       return resultado;
 
     } else {
-      alert('Informe um numero maior que zero no campo solicitado.');
-
-      return false;
+      throw new TypeError('Deve digitar um numero', 4);
     }
 
   },
   decode: function(numero, texto) {
+    if (numero == undefined || texto == undefined) {
+      throw new TypeError('Parametros requiridos', 3);
+    }
     numero = parseInt(numero);
-    const caracteresValidos = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'X', 'Y', 'Z', ' '];
+
+    if (numero <= 0) {
+      throw new TypeError('Numero deve ser positivo', 4);
+    }
+
+    if (texto.length == 0) {
+      throw new TypeError('Texto deve ser digitado', 5);
+    }
+
+    const caracteresValidos = this.caracteresValidos;
 
     let resultado = '';
-    let myRe = /[^A-Z\ ]+/g;
+    let myRe = /[^A-Z]+/g;
     let verificaCaracteresValidos = texto.match(myRe);
 
     if (verificaCaracteresValidos && verificaCaracteresValidos.length > 0) {
-      alert('Voce deve digitar apenas letras de A - Z e numeros')
-      return false;
+      throw new TypeError('Voce deve digitar apenas letras de A - Z e numeros', 10);
     }
-    if (numero != NaN && numero > 0) {
+    if (!isNaN(numero) && numero > 0) {
 
       for(let contador = 0; contador < texto.length; contador++) {
         let caracterAtual = texto[contador];
@@ -61,13 +82,11 @@ const cipher = {
 
         resultado += caracteresValidos[indice].toString();
       }
-      
+
       return resultado;
 
     } else {
-      alert('Informe um numero maior que zero no campo solicitado.');
-
-      return false;
+      throw new TypeError('Deve digitar um numero', 11);
     }
 
   }
