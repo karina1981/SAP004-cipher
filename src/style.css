@@ -5,7 +5,7 @@
 
 }
 
-html {
+html{
 background-image: linear-gradient(rgb(176, 176, 238),white);
 margin: 10px 10px 10px 10px;
 }
@@ -16,10 +16,11 @@ margin: 10px 10px 10px 10px;
     color: blue;
 }
 
-.pass{
+#pass{
     color: darkviolet;
-    border-radius: 40px;
-    background-color: firebrick;
+    border: none ;
+    border-radius: 10px;
+    text-align: left;
 }
 
 div.textIn{
