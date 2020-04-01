@@ -2,19 +2,10 @@
 const cipher = {
   caracteresValidos: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
   encode: function(numero, texto) {
-    if (numero == undefined || texto == undefined) {
+    if (!numero || !texto) {
       throw new TypeError('Parametros requiridos', 2);
     }
-    numero = parseInt(numero);
-
-    if (numero <= 0) {
-      throw new TypeError('Numero deve ser positivo', 6);
-    }
-
-    if (texto.length == 0) {
-      throw new TypeError('Texto deve ser digitado', 5);
-    }
-
+    texto = texto.toUpperCase();
     const caracteresValidos = this.caracteresValidos;
 
     let resultado = "";
@@ -22,7 +13,7 @@ const cipher = {
     let verificaCaracteresValidos = texto.match(myRe);
 
     if (verificaCaracteresValidos && verificaCaracteresValidos.length > 0) {
-      throw new TypeError('Voce deve digitar apenas letras de A - Z e numeros', 10)
+      throw new TypeError('Voce deve digitar apenas letras de A - Z e numeros');
     }
 
     if (!isNaN(numero) && numero > 0) {
@@ -39,25 +30,14 @@ const cipher = {
 
       return resultado;
 
-    } else {
-      throw new TypeError('Deve digitar um numero', 4);
     }
-
   },
   decode: function(numero, texto) {
-    if (numero == undefined || texto == undefined) {
+    if (!numero || !texto) {
       throw new TypeError('Parametros requiridos', 3);
     }
-    numero = parseInt(numero);
 
-    if (numero <= 0) {
-      throw new TypeError('Numero deve ser positivo', 4);
-    }
-
-    if (texto.length == 0) {
-      throw new TypeError('Texto deve ser digitado', 5);
-    }
-
+    texto = texto.toUpperCase();
     const caracteresValidos = this.caracteresValidos;
 
     let resultado = '';
@@ -85,8 +65,6 @@ const cipher = {
 
       return resultado;
 
-    } else {
-      throw new TypeError('Deve digitar um numero', 11);
     }
 
   }

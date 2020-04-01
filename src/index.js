@@ -1,9 +1,16 @@
 import cipher from './cipher.js';
 
-window.cipher = cipher;
 
-// console.log(cipher);
+document.getElementById("codificar").addEventListener("click", function() {
+    let numero = document.getElementById('pass');
+    let texto = document.getElementById('story');
+    let resultado = cipher.encode(parseInt(numero.value), texto.value);
+    document.getElementById('resultado').innerHTML = resultado;
+});
 
-// let numero = document.getElementById('pass');
-
-// let texto = document.getElementById('textIn');
+document.getElementById("descodificar").addEventListener("click", function() {
+    let numero = document.getElementById('pass');
+    let texto = document.getElementById('story');
+    let resultado = cipher.decode(parseInt(numero.value), texto.value);
+    document.getElementById('resultado').innerHTML = resultado;
+});
