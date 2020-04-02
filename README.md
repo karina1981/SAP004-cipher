@@ -33,7 +33,7 @@ substituida por outra que se encontra há um número fixo de posições
 
 Por exemplo se usarmos o deslocamento (_offset_) de 3 posições:
 
-* Alfabeto sem cifrar: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+* Alfabeto sem cifrar: A B C D E F G H I J K L Mnpm test N O P Q R S T U V W X Y Z
 * Alfabeto com cifra:  D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
 * A letra A será D
 * A palavra CASA será FDVD
