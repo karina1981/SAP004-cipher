@@ -1,0 +1,58 @@
+*{
+    color: rgb(233, 10, 10);
+}
+html{
+    background: url('img/índice.jpeg');
+    margin: 50px 10px 10px 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+* {
+    text-align: center;
+} 
+
+h1{
+    color: rgb(121, 34, 19);
+
+}
+
+.instrucao {
+    background-image: opacity: 10%, radial-gradient(#FFC1C1, #FFE4E1, #E8E8E8);
+    margin: 10px 10px 10px 10px;
+    position: relative;
+    padding: 0.4em;
+    float: left;
+    width: 30%;
+    margin: 0.9em;
+    text-align: center;
+    border-radius: 10%;
+    font-size: 20px;
+}
+
+p{
+    opacity: 100%;
+    color: maroon;
+    font-family: URW Chancery L, cursive;
+    font-weight: 600;
+    font-size: 28px;
+
+  }
+
+#textStyle{
+    background-color: rgb(245, 236, 239);
+    opacity: 80%;
+    font-size: 40px;
+    text-align: inherit;
+}
+
+button{
+    border-radius: 50%;
+    font-size: 20px;
+    height: 40px;
+    cursor: pointer;
+}
