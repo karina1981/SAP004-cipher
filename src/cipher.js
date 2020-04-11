@@ -1,20 +1,54 @@
 const cipher = {
   encode: function(numero, texto) {
-    texto = texto.toUpperCase();//.replace(/[^A-Z]+/g,"");
+    if (typeof texto != 'string') {
+      throw TypeError("texto undefined");
+    }
     numero = parseInt(numero);
     let resultado = "";
     for(let contador = 0; contador < texto.length; contador++) {
-      let indexValido = (((texto.charCodeAt(contador) - 65) + numero)%26 )+ 65;
+
+      let charcode = texto.charCodeAt(contador);
+      if (charcode > 122 || charcode < 65 || (charcode > 90 && charcode < 97)) {
+        // concatena o que nao for de "a-z A-Z"
+        resultado += texto[contador];
+        continue;
+      }
+
+      let min = 65;// A-Z maiusculo
+      if (charcode >= 97 && charcode <= 122) {
+        // a-z minusculo
+        min = 97;
+      }
+
+      let indexValido = (((texto.charCodeAt(contador) - min) + numero)%26 )+ min;
       resultado += String.fromCharCode(indexValido);
     }
+
     return resultado;
   },
+
   decode: function(numero, texto) {
-    texto = texto.toUpperCase();//.replace(/[^A-Z]+/g,"");
+    // if (typeof texto!= 'string'){
+    //   throw TypeError("texto undefined");
+    // }
     numero = parseInt(numero);
     let resultado = "";
     for(let contador = 0; contador < texto.length; contador++){
-      let indexValido = (((texto.charCodeAt(contador) - 90) - numero)% 26) + 90;
+      
+      let charcode = texto.charCodeAt(contador);
+      if (charcode > 122 || charcode < 65 || (charcode > 90 && charcode < 97)) {
+        // concatena o que nao for de "a-z A-Z"
+        resultado += texto[contador];
+        continue;
+      }
+
+      let mai = 90
+      if (charcode >= 97 && charcode <= 122) {
+
+        mai = 122
+      }
+
+      let indexValido = (((texto.charCodeAt(contador) - mai) - numero)% 26) + mai;
       resultado += String.fromCharCode(indexValido);
     }
     return resultado;
@@ -22,4 +56,3 @@ const cipher = {
 };
 
 export default cipher;
-

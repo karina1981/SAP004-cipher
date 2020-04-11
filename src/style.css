@@ -1,5 +1,5 @@
 *{
-    color: rgb(233, 10, 10);
+    color: brown;
 }
 html{
     background: url('img/índice.jpeg');
@@ -16,13 +16,8 @@ html{
     text-align: center;
 } 
 
-h1{
-    color: rgb(121, 34, 19);
-
-}
-
 .instrucao {
-    background-image: opacity: 10%, radial-gradient(#FFC1C1, #FFE4E1, #E8E8E8);
+    
     margin: 10px 10px 10px 10px;
     position: relative;
     padding: 0.4em;
@@ -35,7 +30,9 @@ h1{
 }
 
 p{
-    opacity: 100%;
+    background-image:radial-gradient(#FFC1C1, #FFE4E1, #E8E8E8);
+    opacity: 50%;
+    border-radius: 350%;
     color: maroon;
     font-family: URW Chancery L, cursive;
     font-weight: 600;
@@ -55,4 +52,9 @@ button{
     font-size: 20px;
     height: 40px;
     cursor: pointer;
+}
+
+#resultado {
+    background-color: #FFB5C5;
+    /* opacity: 100%; */
 }
