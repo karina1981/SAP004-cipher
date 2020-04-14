@@ -9,14 +9,14 @@ const cipher = {
 
       let charcode = texto.charCodeAt(contador);
       if (charcode > 122 || charcode < 65 || (charcode > 90 && charcode < 97)) {
-        // concatena o que nao for de "a-z A-Z"
+        
         resultado += texto[contador];
         continue;
       }
 
-      let min = 65;// A-Z maiusculo
+      let min = 65;
       if (charcode >= 97 && charcode <= 122) {
-        // a-z minusculo
+        
         min = 97;
       }
 
@@ -28,16 +28,16 @@ const cipher = {
   },
 
   decode: function(numero, texto) {
-    // if (typeof texto!= 'string'){
-    //   throw TypeError("texto undefined");
-    // }
+     if (typeof texto!= 'string'){
+     throw TypeError("texto undefined");
+    }
     numero = parseInt(numero);
     let resultado = "";
     for(let contador = 0; contador < texto.length; contador++){
       
       let charcode = texto.charCodeAt(contador);
       if (charcode > 122 || charcode < 65 || (charcode > 90 && charcode < 97)) {
-        // concatena o que nao for de "a-z A-Z"
+        
         resultado += texto[contador];
         continue;
       }

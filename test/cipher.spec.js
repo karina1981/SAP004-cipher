@@ -54,10 +54,10 @@ describe('cipher', () => {
     });
 
     it('should throw TypeError when invoked with wrong argument types', () => {
-      expect(() => cipher.dencode()).toThrow(TypeError);
-      expect(() => cipher.dencode(0)).toThrow(TypeError);
-      expect(() => cipher.dencode(null, [])).toThrow(TypeError);
-      expect(() => cipher.dencode(0, 0)).toThrow(TypeError);
+      expect(() => cipher.decode()).toThrow(TypeError);
+      expect(() => cipher.decode(0)).toThrow(TypeError);
+      expect(() => cipher.decode(null, [])).toThrow(TypeError);
+      expect(() => cipher.decode(0, 0)).toThrow(TypeError);
     });
 
     it('should return "ABCDEFGHIJKLMNOPQRSTUVWXYZ" for "HIJKLMNOPQRSTUVWXYZABCDEFG" with offset 33', () => {
