@@ -1,57 +1,44 @@
 const cipher = {
-  encode: function(numero, texto) {
-    if (typeof texto != 'string') {
-      throw TypeError("texto undefined");
+  proxyResult: function(number, text, type){
+    if (typeof text != 'string') {
+      throw TypeError("text undefined");
     }
-    numero = parseInt(numero);
-    let resultado = "";
-    for(let contador = 0; contador < texto.length; contador++) {
+    number = parseInt(number);
+    let result = "";
+    for(let counter = 0; counter < text.length; counter++) {
 
-      let charcode = texto.charCodeAt(contador);
+      let charcode = text.charCodeAt(counter);
       if (charcode > 122 || charcode < 65 || (charcode > 90 && charcode < 97)) {
         
-        resultado += texto[contador];
+        result += text[counter];
         continue;
       }
 
-      let min = 65;
-      if (charcode >= 97 && charcode <= 122) {
-        
-        min = 97;
+      let indexValid = 0;
+      if (type == 'encode') {
+        let min = 65;
+        if (charcode >= 97 && charcode <= 122) {
+          min = 97;
+        }
+
+        indexValid = (((charcode - min) + number)%26 )+ min;
+      } else {
+        let mai = 90
+        if (charcode >= 97 && charcode <= 122) {
+          mai = 122
+        }
+
+        indexValid = (((charcode - mai) - number)% 26) + mai;
       }
-
-      let indexValido = (((texto.charCodeAt(contador) - min) + numero)%26 )+ min;
-      resultado += String.fromCharCode(indexValido);
+      result += String.fromCharCode(indexValid);
     }
-
-    return resultado;
+    return result;
   },
-
-  decode: function(numero, texto) {
-     if (typeof texto!= 'string'){
-     throw TypeError("texto undefined");
-    }
-    numero = parseInt(numero);
-    let resultado = "";
-    for(let contador = 0; contador < texto.length; contador++){
-      
-      let charcode = texto.charCodeAt(contador);
-      if (charcode > 122 || charcode < 65 || (charcode > 90 && charcode < 97)) {
-        
-        resultado += texto[contador];
-        continue;
-      }
-
-      let mai = 90
-      if (charcode >= 97 && charcode <= 122) {
-
-        mai = 122
-      }
-
-      let indexValido = (((texto.charCodeAt(contador) - mai) - numero)% 26) + mai;
-      resultado += String.fromCharCode(indexValido);
-    }
-    return resultado;
+  encode: function(number, text) {
+    return this.proxyResult(number, text, 'encode');
+  },
+  decode: function(number, text) {
+    return this.proxyResult(number, text, 'decode');
   }
 };
 

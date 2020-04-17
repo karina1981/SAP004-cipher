@@ -1,15 +1,21 @@
 import cipher from './cipher.js';
 
-document.getElementById('crip').addEventListener('click', function(){
-    let codigo = document.getElementById('codigo').value
-    let text = document.querySelector('textarea[name="textOn"]').value
-     //executar uma função dentro do cipher
-    document.getElementById('resultado').innerHTML=cipher.encode(codigo, text);
+const getValues = function() {
+    return { 'code' : document.getElementById('code').value, 'text': document.querySelector('textarea[name="text-On"]').value };
+}
+
+const writeResult = function(result) {
+    document.getElementById('result').innerHTML = result;
+}
+
+document.getElementById('encrypt').addEventListener('click', function(){
+    let values = getValues();
+    let result = cipher.encode(values.code, values.text);
+    writeResult(result);
 })
 
-document.getElementById('decrip').addEventListener('click', function(){
-    let codigo = document.getElementById('codigo').value
-    let text = document.querySelector('textarea[name="textOn"]').value
-
-    document.getElementById('resultado').innerHTML=cipher.decode(codigo, text);
+document.getElementById('decrypt').addEventListener('click', function(){
+    let values = getValues();
+    let result = cipher.decode(values.code, values.text);
+    writeResult(result);
 })

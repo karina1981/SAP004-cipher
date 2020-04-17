@@ -1,49 +1,38 @@
-*{
-    color: brown;
-}
-html{
+body {
     background: url('img/índice.jpeg');
-    margin: 50px 10px 10px 10px;
     background-position: center;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    color: brown;
+    text-align: center;
+    width: 100%;
+    height: 100%;
 }
 
-* {
-    text-align: center;
-} 
-
-.instrucao {
-    
-    margin: 10px 10px 10px 10px;
+input {
+    font-size: 40px;
+}
+.instruction {
+    margin: 3% 3% 3% 3%;
     position: relative;
     padding: 0.4em;
     float: left;
-    width: 30%;
-    margin: 0.9em;
+    width: 25%;
     text-align: center;
-    border-radius: 10%;
-    font-size: 20px;
-}
-
-p{
+    font-size: 100%;
     background-image:radial-gradient(#FFC1C1, #FFE4E1, #E8E8E8);
     opacity: 50%;
-    border-radius: 350%;
+    border-radius: 0px 100px 0px 100px;
     color: maroon;
     font-family: URW Chancery L, cursive;
     font-weight: 600;
     font-size: 28px;
-
-  }
+}
 
 #textStyle{
     background-color: rgb(245, 236, 239);
     opacity: 80%;
-    font-size: 40px;
+    font-size: 100%;
     text-align: inherit;
 }
 
@@ -54,7 +43,7 @@ button{
     cursor: pointer;
 }
 
-#resultado {
+#result {
     background-color: #FFB5C5;
-    /* opacity: 100%; */
+    border-radius:0px 20px 0px 20px;
 }
