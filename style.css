@@ -1,0 +1,49 @@
+body {
+    background: url('img/índice.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    color: brown;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+input {
+    font-size: 40px;
+}
+.instruction {
+    margin: 3% 3% 3% 3%;
+    position: relative;
+    padding: 0.4em;
+    float: left;
+    width: 25%;
+    text-align: center;
+    font-size: 100%;
+    background-image:radial-gradient(#FFC1C1, #FFE4E1, #E8E8E8);
+    opacity: 50%;
+    border-radius: 0px 100px 0px 100px;
+    color: maroon;
+    font-family: URW Chancery L, cursive;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+#textStyle{
+    background-color: rgb(245, 236, 239);
+    opacity: 80%;
+    font-size: 100%;
+    text-align: inherit;
+}
+
+button{
+    border-radius: 50%;
+    font-size: 20px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#result {
+    background-color: #FFB5C5;
+    border-radius:0px 20px 0px 20px;
+}
