@@ -1,15 +1,24 @@
-# Couple's Secret
+<p align="center">
+  <img width="300" height="200" src="src/img/fcouple.png">
+</p>
 
+---
+## Índice
+- [1. Apresentação](#1-apresentacao)
+- [2. Resumo do projeto "história do Usuário"](#2-resumo-do-projeto-historia-do-Usuario)
+- [3. Planejamento](#3-planejamento)
+- [4. Instalação](#4-instalacao)
+- [5. Autoria e Considerações Finais](#5-autoria-e-consideracoes-finais)
 
-## Quem somos
+## Apresentação
 
 Somos um canal que se preocupa com a intregridade dos nossos clientes.
 
-## Principais Usuário
+## Resumo do Projeto história do Usuário
 
 Existe momentos em que os casais precisam de um pouco de descrição e com as redes sociais as vezes podemos mandar aquela mensgem no grupo da familia uma forma de isto não acontecer é mandar o "recadinho com uma pimentinha" cifrado assim somente quem possui o código secreto irá poder descifra 
 
-## Instrução de Uso
+## Planejamenteo
 - A página permite escolher entre encripitar ou descripitar, um texto utilizando o algoritimo Cifra de Cesar. 
 
 - Cripitar:
@@ -34,6 +43,8 @@ como fazer deploy, instalar e executar a aplicação
 4. Para ver a interface do seu programa no navegador, use o comando npm start para iniciar o servidor web e entre na url http://localhost:5000 no seu navegador
 
 
-
-
 ![Image of page](https://github.com/karina1981/SAP004-cipher/blob/master/src/img/fcouple.png)
+
+<b>Desenvolvido por:</b>
+Esse projeto foi desenvolvido individualmente por mim Karina Pereira como parte do bootcamp < Laboratoria >. desafio e prazer em criar algo do zero e sozinha claro que com ajuda e mentoria!
+
